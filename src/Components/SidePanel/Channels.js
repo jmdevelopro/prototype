@@ -16,7 +16,7 @@ class channels extends React.Component{
                 <Menu.Item>
                     <span>
                         <Icon name="exchange" />CHANNELS
-                    </span>{' '}
+                    </span>{'  '}
                     ({channels.length}) <Icon name="add"/>
                 </Menu.Item>
                 {/*channel*/}
