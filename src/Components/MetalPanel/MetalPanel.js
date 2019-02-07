@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-class MetalPanel extends React.Component{
-    render(){
-        return(
-            <div>MetalPanel</div>
-        )
-    }
+class MetalPanel extends React.Component {
+  render() {
+    return <div>MetalPanel</div>;
+  }
 }
 
 export default MetalPanel;
