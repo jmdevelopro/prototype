@@ -24,4 +24,4 @@ class MessagesHeader extends React.Component{
     }
 }
 
-export default MessageHeader;
+export default MessagesHeader;
