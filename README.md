@@ -2,15 +2,23 @@
 
 ## Table of Contents
 
-- Prototype for Haninlook
+- Getting Started
 
 
-## Updating to New Releases
+## Getting Started
 
-Create React App is divided into two packages:
+After cloning code from repo:
 
-* `create-react-app` is a global command-line utility that you use to create new projects.
-* `react-scripts` is a development dependency in the generated projects (including this one).
+* `yarn install` installing all dependecies
+* `npm start` run project.
+
+
+
+
+
+left this for reference purpose
+------------------------------------------------------------------------------------------------------
+
 
 You almost never need to update `create-react-app` itself: it delegates all the setup to `react-scripts`.
 
