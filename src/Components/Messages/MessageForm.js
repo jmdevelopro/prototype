@@ -56,7 +56,7 @@ class MessageForm extends React.Component{
     sendMessage =() =>{
         const {messageRef} = this.props;
         const { message, channel } = this.state;
-        
+        console.log(message);
         if(message){
             // send message
             
@@ -76,8 +76,10 @@ class MessageForm extends React.Component{
                 })
             })
 
-
-        }else {
+        }else if(message ===''){
+            console.log(message);
+        }
+        else {
             this.setState({
                 errors: this.state.errors.concat({message: "Add a message"})
             })
@@ -115,7 +117,7 @@ class MessageForm extends React.Component{
 
     sendFileMessage = (fileUrl, ref, pathToUpload)=>{
         ref.child(pathToUpload).push().set(this.createMessage(fileUrl)).then(()=>{
-            this.UNSAFE_componentWillMount.setState({uploadState: 'done '})
+            this.setState({uploadState: 'done '})
         }).catch(err=>{
             console.error(err);
             this.setState({
