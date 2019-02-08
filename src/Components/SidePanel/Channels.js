@@ -2,7 +2,7 @@ import React from "react";
 import { Menu, Icon, Modal, Form, Input, Button } from "semantic-ui-react";
 import firebase from "../../firebase";
 import { connect} from 'react-redux';
-import {setCurrentChannel} from '../../actions';
+import {setCurrentChannel, setPrivateChannel} from '../../actions';
 class channels extends React.Component {
   state = {
     user: this.props.currentUser,
@@ -87,6 +87,7 @@ class channels extends React.Component {
   changeChannel = channel =>{
       this.setActiveChannel(channel);
       this.props.setCurrentChannel(channel);
+      this.props.setPrivateChannel(false);
 
   }
 
@@ -167,4 +168,4 @@ class channels extends React.Component {
   }
 }
 
-export default connect(null, {setCurrentChannel})(channels);
+export default connect(null, {setCurrentChannel, setPrivateChannel})(channels);
