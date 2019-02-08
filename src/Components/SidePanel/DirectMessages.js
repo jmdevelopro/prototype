@@ -83,8 +83,8 @@ changeChannel = (user)=>{
 }
 
 getChannelId = userId =>{
-    const currentUserUid = this.state.user.uid;
-    return userId < currentUserUid ? `${userId}/${currentUserUid}`:`${currentUserUid}/${userId}`;
+    const currentUserId = this.state.user.uid;
+    return userId < currentUserId ? `${userId}/${currentUserId}`:`${currentUserId}/${userId}`;
 }
 
     render(){

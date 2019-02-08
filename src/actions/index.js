@@ -30,7 +30,7 @@ export const setCurrentChannel = channel =>{
 
 export const setPrivateChannel = isPrivateChannel =>{
   return {
-    tyep: actionTypes.SET_PRIVATE_CHANNEL,
+    type: actionTypes.SET_PRIVATE_CHANNEL,
     payload:{
       isPrivateChannel
     }
