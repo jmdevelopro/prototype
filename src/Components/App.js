@@ -28,7 +28,10 @@ class App extends Component {
           />
         </Grid.Column>
         <Grid.Column width={4}>
-          <MetalPanel />
+          <MetalPanel
+          key={currentChannel && currentChannel.id}
+          currentChannel={currentChannel}
+          isPrivateChannel={isPrivateChannel} />
         </Grid.Column>
       </Grid>
     );
