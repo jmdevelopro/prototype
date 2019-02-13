@@ -12,7 +12,7 @@ class App extends Component {
 
   
   render() {
-    const { currentUser, currentChannel, isPrivateChannel} = this.props;
+    const { currentUser, currentChannel, isPrivateChannel, userPosts} = this.props;
     return (
       <Grid columns="equal" className="app" style={{ background: "#eee" }}>
         <ColorPanel />
@@ -31,6 +31,7 @@ class App extends Component {
           <MetalPanel
           key={currentChannel && currentChannel.id}
           currentChannel={currentChannel}
+          userPosts={userPosts}
           isPrivateChannel={isPrivateChannel} />
         </Grid.Column>
       </Grid>
@@ -41,7 +42,8 @@ class App extends Component {
 const mapStateToProps = state => ({
   currentUser: state.user.currentUser,
   currentChannel: state.channel.currentChannel,
-  isPrivateChannel: state.channel.isPrivateChannel
+  isPrivateChannel: state.channel.isPrivateChannel,
+  userPosts: state.channel.userPosts
 });
 
 export default connect(mapStateToProps)(App);
