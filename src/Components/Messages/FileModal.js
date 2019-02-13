@@ -1,6 +1,5 @@
 import React from 'react';
 import {Modal, Input, Button, Icon} from 'semantic-ui-react';
-import MessageForm from './MessageForm';
 import mime from 'mime-types';
 
 

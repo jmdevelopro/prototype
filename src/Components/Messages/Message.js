@@ -5,7 +5,7 @@ import moment from 'moment';
 
 
 const isOwnMessage = (message, user)=>{
-    return message.user.id == user.uid ? 'message__self':'';
+    return message.user.id === user.uid ? 'message__self':'';
 }
 
 const isImage = (message)=>{
